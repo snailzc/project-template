@@ -124,3 +124,31 @@
     }
   }
 }
+
+@media screen and (max-width: 1360px){
+  .login{
+      header{
+          display: none;
+      }
+  }
+}
+@media screen and (max-width: 1380px){
+  .login{
+      header{
+          top: 5%!important;  
+      }
+      .content{
+          transform: translate(-50%, -50%) !important;
+      }
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1920px){
+  .login{
+      header{
+          top: 12%!important;  
+      }
+      .content{
+          transform: translate(-50%, -50%) !important;
+      }
+  }
+}

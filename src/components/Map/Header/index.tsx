@@ -25,7 +25,7 @@ const Header: React.FC = memo(() => {
           <Icon type="clock-circle" />
           {moment(time).format(FORMAT)}
         </div>
-        <div className={styles.title}>BI平台实时数据看板</div>
+        <div className={styles.title}>实时数据看板</div>
         <div className={styles.desc}>
           <Icon type="setting" />
           统计维度：昨天

@@ -36,10 +36,10 @@ const Index: React.FC = (props: any) => {
       <Menu.Item disabled>
         <Icon type="setting" />设置
       </Menu.Item> */}
-      <Menu.Item key="psd">
+      {/* <Menu.Item key="psd">
         <Icon type="lock" />修改密码
       </Menu.Item>
-      <Menu.Divider />
+      <Menu.Divider /> */}
       <Menu.Item key="logout">
         <Icon type="logout" />退出登录
       </Menu.Item>

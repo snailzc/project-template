@@ -44,6 +44,16 @@ export function del(url: string, params?: {[key: string]: any}) {
   });
 }
 
+export function delBody(url: string, params?: {[key: string]: any}) {
+  return fetch(url, {
+    body: JSON.stringify(params),
+    headers: {
+      'Authorization': localStorage.getItem('token') || '',
+      'content-type': 'application/json'
+    },
+    method: 'DELETE'
+  }).then(response => response.json())
+}
 
 
 

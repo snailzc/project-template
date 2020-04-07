@@ -48,7 +48,7 @@ const FormCom = (props: any) => {
       }
       {
         formItem.map((item: any, index:number) => {
-          if (initClass === 'active' || !item.fromHiden) {
+          if (initClass === 'active' || !item.formHidden) {
             return (
               <FormItem key={index} className={styles.formItem} style={{width: item.width}}>
                 {getFieldDecorator(item.key, {

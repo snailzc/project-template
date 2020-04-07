@@ -1,5 +1,5 @@
 import { stringify } from 'qs';
-import {post, get, put, del} from '../utils/request';
+import {post, get, put, del, delBody} from '../utils/request';
 import { getToken } from '../utils/usertoken';
 import { FETCH_ENV } from '../utils/util';
 
@@ -100,7 +100,7 @@ export async function putMenu(params, uri) {
 }
 
 export async function deleteMenu(params, uri) {
-  return del(`/api${uri}`, {id: params.id})
+  return delBody(`/api${uri}`, {id: params.id})
 }
 
 export async function queryAddMenu(params, uri) {

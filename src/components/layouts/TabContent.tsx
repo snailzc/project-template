@@ -5,23 +5,19 @@ import router from 'umi/router';
 
 const { TabPane } = Tabs;
 
-const test = require('src/pages/test').default
-
-const map = require('src/pages/map').default
-
 const menus = require('src/pages/admin/menus/Menus.js').default
-
 const group = require('src/pages/admin/group/Group.js').default
-
 const evp = require('src/pages/admin/evpDataInterface/EvpDataInterface.js').default
-// pathname => component
 
+const plcDemo = require('src/pages/plcDemo').default
+const mapDemo = require('src/pages/mapDemo').default
+
+// pathname => component
 const components: {[key: string]: any} = {
-  '/bizManager/sampleProjbiz/samplePage/plcInfoMaintain': require('src/pages/plc').default,
-  '/bizManager/sampleProjbiz/samplePage/testpage': test,
   '/bizManager/sampleProjbiz/sampleProjManager/menuManager': menus,
   '/bizManager/sampleProjbiz/sampleProjManager/groupManager': group,
   '/bizManager/sampleProjbiz/sampleProjManager/dataManager': evp,
+  '/bizManager/sampleProjbiz/samplePage/plcInfoMaintain': plcDemo
 }
 
 const Index: React.FC = (props:any) => {
@@ -29,7 +25,7 @@ const Index: React.FC = (props:any) => {
   const [panes, setPanes] = useState<any>([
     {
       title: '首页',
-      component: map,
+      component: mapDemo,
       key: '/'
     }
   ])
@@ -54,7 +50,7 @@ const Index: React.FC = (props:any) => {
     })
     setActiveKey(activeKey)
     if (!isExist) {
-      setPanes([...panes, { title: activeObj ? activeObj.title : 404, component: components[activeKey] || test, key: activeKey }])
+      setPanes([...panes, { title: activeObj ? activeObj.title : 404, component: components[activeKey] || plcDemo, key: activeKey }])
     }
   }, [props.location.pathname])
 
