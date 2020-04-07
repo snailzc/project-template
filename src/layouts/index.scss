@@ -1,0 +1,53 @@
+@import 'utils/scss/color.scss';
+.layout {
+  height: 100vh;
+  overflow-x: hidden;
+  .toogle_wrap {
+    position: absolute;
+    right: 1px;
+    width: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    > div {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 68px;
+      background: rgba(54, 79, 116, .6);
+      cursor: pointer;
+    }
+  }
+  :global {
+    .ant-layout-sider {
+      overflow-x: hidden;
+      transition: all .2s linear;
+      &.left {
+        flex: 0 0 240px !important;
+        max-width: 240px !important;
+        min-width: 240px !important;
+        width: 240px !important;
+      }
+      &.right {
+        flex: 0 0 0px !important;
+        max-width: 0px !important;
+        min-width: 0px !important;
+        width: 0px !important;
+      }
+    }
+    .ant-layout-sider-children {
+      height: 100%;
+      overflow-y: auto;
+      width: 100%;
+      background: $menu;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+}

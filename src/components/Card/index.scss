@@ -1,0 +1,32 @@
+.card {
+  position: relative;
+  display: flex;
+  background: rgba(40, 47, 56, 0.5);
+  flex-direction: column;
+  padding: 14px;
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    .title {
+      position: relative;
+      float: left;
+      color: #77fbe3;
+      margin-left: 10px;
+      &::before {
+        content: '';
+        width: 3px;
+        height: 70%;
+        background: #5597e6;
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .content {
+    flex: 1;
+  }
+}

@@ -1,0 +1,61 @@
+.formWrap {
+  // position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px;
+  z-index: 999;
+  .form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    // &.inactive {
+    //   // height: 45px;
+    //   // overflow: hidden;
+    // }
+  }
+  .formItem {
+    display: flex;
+    align-items: center;
+    margin-right: 14px;
+    margin-bottom: 0;
+    :global {
+      .ant-form-item-control-wrapper {
+        width: 100%;
+        .ant-form-item-control {
+          width: 100%;
+          .ant-form-item-children {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+  .searchButton {
+    // position: absolute;
+    right: 30px;
+    bottom: 5px;
+    display: flex;
+    width: 140px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .arrow {
+    right: 18px;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transform-origin:50% 45%;
+    transition: all .4s ease;
+    &.active {
+      transform: rotateZ(180deg)
+    }
+  }
+}

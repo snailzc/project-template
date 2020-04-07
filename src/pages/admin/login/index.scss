@@ -1,0 +1,126 @@
+.login {
+  height: 100vh;
+  min-height: 580px;
+  min-width: 830px;
+  position: relative;
+  overflow: hidden;
+  header {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    height:42px;
+    font-weight:600;
+    line-height:42px;
+    img {
+      vertical-align: middle;
+      margin-right: 14px;
+      transform: translateY(4px);
+    }
+  }
+  .content {
+    width: 830px;
+    height: 415px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:rgba(255,255,255,1);
+    border-radius:10px;
+    display: flex;
+    overflow: hidden;
+    .left {
+      flex: 4;
+      height: 100%;
+    }
+    .right {
+      flex: 7;
+      height: 100%;
+      box-sizing: border-box;
+      font-size: 18px;
+      color: #919596;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+      .btn {
+        padding: 13px 16px;
+        border-radius: 0;
+        border: 0;
+        height: 47px;
+        span {
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+      :global{
+        .ant-tabs{
+          width: 426px;
+          .ant-tabs-tab{
+            font-weight: 600;
+            padding: 8px 60px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #919596;
+          }
+          .ant-tabs-bar {
+            margin: 10px 0 0 7px;
+          }
+          .ant-tabs-tab-active{
+            color: #1890FF!important;
+            border-bottom: 2px solid #1890FF!important;
+          }
+          .ant-tabs-content{
+            width: 100%;
+            overflow: hidden!important;
+            margin: 0 auto;
+            padding: 5% 0px 0px;
+            .ant-input{
+              width: 100%;
+              font-size: 14px;
+              height: 47px;
+              color: #333;
+              padding: 13px 30px;
+              box-sizing: border-box;
+              border-radius: 0px!important;
+              border: 1px solid #EBEBEB;
+            }
+            .ant-tabs-tabpane{
+              >.ant-form-item {
+                margin-bottom: 24px !important;
+                min-height: 47px !important;
+                .ant-form-explain {
+                  line-height: 30px !important;
+                }
+              }
+            }
+            .ant-btn{
+              border:0!important;
+            }
+            .ant-btn-lg{
+              border:0!important;
+            }
+            .formBottom{
+              .ant-form-item {
+                margin-bottom: 0px!important;
+                min-height: 44px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    p {
+      font-size:14px;
+      font-weight:400;
+      color:rgba(255,255,255,0.6);
+    }
+  }
+}

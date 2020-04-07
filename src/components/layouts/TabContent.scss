@@ -1,0 +1,44 @@
+.tabContent {
+  padding: 4px;
+  background-color: #fff;
+  .operation {
+    margin-right: 10px;
+    cursor: pointer;
+    height: 100%;
+    display: inline-block;
+  }
+  :global {
+    .ant-tabs-bar {
+      margin-bottom: 10px;
+      // border: 0;
+      // box-shadow: 0 0 8px rgba(0,0,0, 0.2);
+    }
+    .ant-tabs-content {
+      height: calc(100vh - #{110px});
+      overflow-x: hidden;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        // height: 10px;
+        width: 7px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #c2c2c2;
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2) inset;
+        border: 5px solid transparent;
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 0;
+        background: rgba(0, 0, 0, 0.1);
+        border: 5px solid transparent;
+      }
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+      font-weight: normal;
+    }
+    .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+      // margin: 0;
+      // border: 0;
+    }
+  }
+}

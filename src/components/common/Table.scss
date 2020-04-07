@@ -1,0 +1,99 @@
+@import "styles/color.scss";
+@import "styles/base.scss";
+.globalTable {
+  :global {
+    .ant-tabel-fixed-header
+      > .ant-tabel-content
+      > .ant-table-scroll
+      > .ant-table-boy {
+        top: -15px;
+    }
+    .ant-spin-container {
+      .ant-table-pagination.ant-pagination {
+      }
+    }
+    .ant-table-header {
+      overflow-y: hidden !important;
+      overflow-x: auto;
+    }
+    .ant-table-body {
+      height: calc(100vh - #{330px}) !important;
+      &::-webkit-scrollbar {
+        height: 8px;
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #c2c2c2;
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2) inset;
+        border: 5px solid transparent;
+      }
+      &::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.1);
+        border: 5px solid transparent;
+      }
+    }
+    .ant-table-small > .ant-table-content > .ant-table-body {
+      margin: 0;
+    }
+    table {
+      th {
+        background: $tableTh !important;
+        text-align: center !important;
+        color: white !important;
+        border-right: #dce1ed !important;
+        font-size: 14px !important;
+        height: 40px !important;
+      }
+      td {
+        text-align: center;
+        color: $tableTextColor !important;
+        border-right-color: #e1e7ed !important;
+        span {
+          .anticon {
+            color:#8ccad9;
+            svg {
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+    }
+    .letter-overflow {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+.grayItem {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f3fa;
+  margin-bottom: 10px;
+}
+.operationWrap {
+  display: flex;
+  justify-content: center;
+  a {
+    padding: 0 10px;
+    width: 50px;
+  }
+}
+.btns{
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.btnsLeft{
+  button{
+    margin-right: 20px;
+  }
+}
+.btnsRight{
+  button{
+    margin-left: 20px;
+  }
+}
