@@ -26,6 +26,7 @@ const Index: React.FC = (props:any) => {
         <Menu.Item key={`${path}/${arr[arr.length - 1]}`}>
           <Link to={`${path}/${arr[arr.length - 1]}`}>
             {/* <Icon type={item.icon} /> */}
+            <Icon type="database" />
             <span>{item.title}</span>
           </Link>
         </Menu.Item>
@@ -43,8 +44,9 @@ const Index: React.FC = (props:any) => {
       }
 
       if (item.title === '基础配置管理') {
+        const title: React.ReactNode = <span><Icon type="bars" /><span>{item.title}</span></span>;
         return (
-          <SubMenu key={item.path} title={item.title}>
+          <SubMenu key={item.path} title={title}>
             {
               getManagementMenuItems(item.children, item.path)
             }
@@ -53,8 +55,9 @@ const Index: React.FC = (props:any) => {
       }
 
       if (item.children && item.children[0]) {
+        const title: React.ReactNode = <span><Icon type="bars" /><span>{item.title}</span></span>;
         return (
-          <SubMenu key={item.path} title={item.title}>
+          <SubMenu key={item.path} title={title}>
             {
               getNavMenuItems(item.children)
             }
@@ -65,6 +68,7 @@ const Index: React.FC = (props:any) => {
           <Menu.Item key={item.path}>
             <Link to={item.path}>
               {/* <Icon type={item.icon} /> */}
+              <Icon type="database" />
               <span>{item.title}</span>
             </Link>
           </Menu.Item>
