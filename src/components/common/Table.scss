@@ -17,7 +17,7 @@
       overflow-x: auto;
     }
     .ant-table-body {
-      height: calc(100vh - #{330px}) !important;
+      max-height: calc(100vh - #{330px}) !important;
       &::-webkit-scrollbar {
         height: 8px;
         width: 4px;
